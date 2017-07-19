@@ -143,7 +143,7 @@ class EmpresaController extends Controller {
             
             $nm_imagem = substr($filename, 7 );
             
-            Imagem::where('conteudo_tipo','=','L')-> Update(['nm_imagem' =>  $nm_imagem,]);
+            Imagem::where('conteudo_tipo','=','L')->Update(['nm_imagem' =>  $nm_imagem,]);
         }
 
 

@@ -1,0 +1,17 @@
+ 
+ 		ROTEIRO PARA IMPLANTAÇÃO
+
+
+Executar os comandos:
+   Link para imagens => php artisan storage:link
+
+
+
+
+
+VALIDAR SE NECESSIRA INSERIR
+   CSS
+   <link rel="stylesheet" href="{{url('assets/painel/css/jquery-ui.css')}}"/>
+
+    JS
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>  
