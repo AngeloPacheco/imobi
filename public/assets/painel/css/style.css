@@ -1,0 +1,339 @@
+
+
+/* 
+    Created on : 02/06/2017, 20:21:55
+    Author     : Angelo
+*/
+
+/*
+ CSS global
+*/
+.links{
+    text-decoration: none;
+    color: #2a3f54;
+}
+/* Title*/
+.painel-title{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 95px;
+}
+/****/
+
+
+
+/*
+      TOPO
+*****************/
+.topo{
+    float: left;
+    background: rgba(221, 221, 221, 0.4);
+    width: 100%;
+}
+
+.user{
+    float: right;
+    cursor: pointer;
+    
+}
+img.user{
+    width: 50px;
+    float: left;
+    margin-top: 5px;
+}
+.user-name{
+    float: left;
+    margin: 20px 10px;
+    font-weight: bold;
+}
+.user span.caret{
+     margin: 28px 10px;
+}
+
+
+/*
+     MENU
+*****************/
+.painel-fa{
+   font-size: 1.2em;
+}
+.painel-navbar{
+   top: 45px !important;   
+}
+
+
+/***************/
+
+/*    LOGO       
+*****************/
+.logo{
+    max-width: 70px;
+    margin: 25px 0 0 50px;
+}
+/****************/
+
+.header{
+    background: rgba(0, 103, 113, 0.53);
+    float: left;
+    padding: 20px;
+    width: 100%;
+}
+
+img.logo-painel{
+     width: 320px;
+     padding-top: 20px;
+     margin: -13px 47px;
+}
+
+
+
+
+/*
+    Listagens
+*****************************/
+
+.painel-tabela-cabecalho{
+    font-size: 1.1em;
+}
+
+.btn-edit{
+    background: #104a7b;
+}
+.btn-eye{
+    background: #3c763d;
+}
+.btn-delete{
+    background: #e65a5a;
+
+}
+
+.btn-actions{
+    padding: 8px;
+    color: #999999;
+    font-size: 1em;
+    text-decoration: none;
+    margin: 0px 2px;
+    padding: 7px 12px;
+    border-radius: 2px
+}
+.btn-actions:hover{
+    text-decoration: none;
+    color: #FFF;
+}
+.paginacao{
+    float: left;
+    margin: -20px 20px;
+}
+.form-search{
+    padding: 0px 0px 20px;
+}
+
+/*FORMS*/
+
+.painel-label{
+   display: block; 
+   margin: 10px 0 5px 0;
+}
+
+
+
+/* 
+   FORMULARIO EMPRESA
+**********************************/
+.painel-renderiza-logo{
+    max-width: 150px;
+}
+.painel-panel-logomarca{
+    max-width: 40%; 
+    text-align: center;
+}
+
+
+
+/*
+   BOTÕES
+**********************************/
+.painel-btn{
+  background: #3d4068;
+  float:right;
+  margin: 0 0 10px 10px;
+  padding: 10px 20px;
+  border-color: #3d4068;
+
+}   
+
+}   
+
+/* 
+  Galeria produtos
+*/
+
+input[type="file"] {
+  display: block;
+}
+.imageThumb {
+    height: 230px;
+    width: 280px;
+    padding: 2px;
+    cursor: pointer;
+}
+.pip {
+  display: inline-block;
+  margin: 10px 10px 20px 0;
+
+
+}
+.remove {
+    background: #ef0a0a;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 18px;
+    margin: -25px 0 0 -10px;
+    float: right;
+    position: relative;
+    opacity: 0.8;
+}
+.remove:hover {
+  background: white;
+  color: #ef0606;
+  border: 1px solid #ef0606;
+}
+.titulo-imagem{
+    margin-top: 20px;
+    padding-right: 89px;
+}
+/* --*/
+
+
+.painel-input{
+    margin: 10px 0 0 0;
+
+}
+
+/*
+   CONFIGURAÃ‡Ã•ES
+***********************/
+.lista-configs{
+    padding: 10px;
+    margin-left: 90px;
+}
+
+.opcoes-configs{
+    background: #f1f1f1;
+    float: left;
+    width: 80%;
+    margin: 10px 0px;
+    border-radius: 6px;
+    height: 65px;
+    cursor:pointer;
+}
+.opcoes-configs i{
+    font-size: 3em;
+    float: left;
+    background: #3d4068;
+    color: #FFF;
+    padding: 10px;
+    height: 63px;
+    border-bottom-left-radius: 6px;
+    margin: 1px;
+    border-top-left-radius: 6px;
+}
+.titulo-configs{
+    float: left;
+}
+
+.painel-desc-configs{
+    margin: 20px 0 0 5px;
+    font-weight: bold;
+    font-size: 0.8em;
+ }
+.painel-desc-configs-2{
+    margin: 0 0 0 5px;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+/* 
+    EMPRESA
+*/
+.logomarca{
+    float: right;
+    margin: 0px 30px 0px 0px;
+}
+.painel-panel{
+    margin-top: 20px;
+}
+
+
+/*  BUSCA 
+------------------------------*/
+.msg-busca{
+    margin-left: 10px;
+}
+.painel-btn-pesquisar{
+    color: #fff;
+    background-color: #104a7b;
+}
+.painel-btn-pesquisar:hover{
+    text-decoration: none;
+    color: #FFF;
+}
+
+
+/*
+      PRODUTOS
+/* -----------------------------*/
+.painel-checkbox-produtos{
+   margin: 30px 10px 0 30px;
+}
+.placeholder-right{
+    text-align: right;
+}
+
+.imgs-show-produto{
+    max-width: 20%;
+    float: right; 
+}
+
+/*-------------------------------/
+
+form .ng-invalid-cep {
+  border: solid 1px red;
+}
+
+
+/*  CONTAS PAGAR E RECEBER */
+
+.panel-data-emissao{
+    
+   max-width: 50%;
+   float: right;
+
+}
+.panel-check-credores{
+    
+  
+}
+
+/*
+    ROW  
+**************************/
+.painel-row{
+    margin-left: 80px;
+}    
+
+
+/*
+    COMPRAS / VENDAS 
+**************************/
+
+.painel-datas-lancamentos{
+  max-width: 30%;
+  text-align: center;
+  
+}    
+
+.alinha-data{
+ text-align: center; 
+}
