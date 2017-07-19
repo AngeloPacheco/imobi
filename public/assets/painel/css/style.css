@@ -130,39 +130,38 @@ img.logo-painel{
 
 /*FORMS*/
 
-.painel-label{
+
+/**********************************
+     FORMULARIO DE CADASTROS
+***********************************/
+.form-input{
+    margin: 10px 0 0 0;
+
+}
+
+.form-label{
    display: block; 
    margin: 10px 0 5px 0;
 }
 
-
-
-/* 
-   FORMULARIO EMPRESA
-**********************************/
-.painel-renderiza-logo{
+.renderiza_logomarca{
     max-width: 150px;
 }
-.painel-panel-logomarca{
+.panel-logomarca{
     max-width: 40%; 
     text-align: center;
 }
 
-
-
-/*
-   BOTÕES
-**********************************/
-.painel-btn{
+.form-btns{
   background: #3d4068;
   float:right;
   margin: 0 0 10px 10px;
   padding: 10px 20px;
   border-color: #3d4068;
-
 }   
 
-}   
+
+
 
 /* 
   Galeria produtos
@@ -206,20 +205,16 @@ input[type="file"] {
 /* --*/
 
 
-.painel-input{
-    margin: 10px 0 0 0;
-
-}
 
 /*
-   CONFIGURAÃ‡Ã•ES
+     CONFIGURACOES
 ***********************/
-.lista-configs{
+.conf-listas{
     padding: 10px;
     margin-left: 90px;
 }
 
-.opcoes-configs{
+.conf-menu{
     background: #f1f1f1;
     float: left;
     width: 80%;
@@ -228,7 +223,7 @@ input[type="file"] {
     height: 65px;
     cursor:pointer;
 }
-.opcoes-configs i{
+.conf-menu i{
     font-size: 3em;
     float: left;
     background: #3d4068;
@@ -239,21 +234,20 @@ input[type="file"] {
     margin: 1px;
     border-top-left-radius: 6px;
 }
-.titulo-configs{
+.conf-menu-titulo{
     float: left;
 }
-
-.painel-desc-configs{
+.conf-menu-titulo-1{
     margin: 20px 0 0 5px;
     font-weight: bold;
     font-size: 0.8em;
  }
-.painel-desc-configs-2{
+.conf-menu-titulo-2{
     margin: 0 0 0 5px;
     font-weight: bold;
     font-size: 0.8em;
 }
-
+/**********************************/
 /* 
     EMPRESA
 */

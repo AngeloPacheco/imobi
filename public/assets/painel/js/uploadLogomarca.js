@@ -10,7 +10,7 @@ $("#imagem").on('change', function () {
             reader.onload = function (e) {
                 $("<img />", {
                     "src": e.target.result,
-                    "class": "img-thumbnail painel-renderiza-logo"
+                    "class": "img-thumbnail renderiza_logomarca"
                 }).appendTo(image_holder);
 
             }

@@ -32,7 +32,6 @@ class CreateEmpresaTable extends Migration
             $table->string('telefone',50)->nullable();
             $table->string('fax',50)->nullable();
             $table->string('celular',50)->nullable();  
-
             $table->timestamps();
         });
     }

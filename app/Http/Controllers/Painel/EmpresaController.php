@@ -50,7 +50,6 @@ class EmpresaController extends Controller {
     public function create()
     {
         $title = 'Cadastrar Empresa';
-        
         return view('painel.empresa.create-edit', compact('title'));
     }
 
@@ -137,7 +136,18 @@ class EmpresaController extends Controller {
         $empresa    = $this->empresa->find($id); 
         $update     = $empresa->update($dataForm);
 
-        // fazer update da logomarca
+        
+         foreach ($request->photos as $photo) {
+            
+            $filename = $photo->store('public/img-empresa');
+            
+            $nm_imagem = substr($filename, 7 );
+            
+            Imagem::where('conteudo_tipo','=','L')-> Update(['nm_imagem' =>  $nm_imagem,]);
+        }
+
+
+        
         
 
 

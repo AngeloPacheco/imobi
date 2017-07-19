@@ -7,9 +7,8 @@
        <!-- bootstrap-->
       <link rel="stylesheet" href="{{url('assets/all/css/bootstrap.min.css')}}">
       <link rel="stylesheet" href="{{url('assets/painel/css/style.css')}}"/>
-      <link rel="stylesheet" href="{{url('assets/painel/css/menu-topo.css')}}"/>
+      <link rel="stylesheet" href="{{url('assets/painel/css/menu.css')}}"/>
       <link rel="stylesheet" href="{{url('assets/all/css/font-awesome.min.css')}}"/>
-      <link rel="stylesheet" href="{{url('assets/painel/css/jquery-ui.css')}}"/>
       <link rel="shortcut icon" href="{{url('assets/painel/imgs/tag.png')}}" type="image/x-icon" />
       <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
       <script src="{{url('assets/all/js/jquery-3.2.1.min.js')}}"></script>
@@ -104,7 +103,6 @@
         
         <script src="{{url('assets/painel/js/jquery-ui.js')}}"></script>
         <!-- JS Bootstrap -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>  
         <script src="{{url('assets/all/js/bootstrap.min.js')}}"></script>
         <script src="{{url('assets/painel/js/jquery.maskedinput.min.js')}}"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
