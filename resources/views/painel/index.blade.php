@@ -49,15 +49,15 @@
                             </li>
                             
                             <li>
-                                <a class="painel-fa" href="{{url('painel/')}}" title="Página inicial"><i class="fa fa-home" aria-hidden="true"> </i> <span style="margin-left:10px;">Home</span>  </a>
+                                <a class="painel-fa" href="{{url('painel/')}}" title="Página inicial"><i class="fa fa-window-maximize" aria-hidden="true"> </i> <span style="margin-left:10px;">Início</span>  </a>
                             </li>
                             
                             <li>
-                                <a class="painel-fa" href="{{url('painel/produtos')}}" title="Produtos"> <i class="fa fa-dropbox " aria-hidden="true"> </i> <span style="margin-left:10px;">Produtos</span> </a>
+                                <a class="painel-fa" href="{{url('painel/corretores')}}" title="Corretores"> <i class="fa fa-suitcase" aria-hidden="true"> </i> <span style="margin-left:10px;">Corretores</span> </a>
                             </li>
                             
                             <li>
-                                <a class="painel-fa" href="{{url('painel/fornecedores')}}" title="Fornecedores"> <i class="fa fa-industry" aria-hidden="true"> </i> <span style="margin-left:10px;"> Fornecedores</span> </a>
+                                <a class="painel-fa" href="{{url('painel/imoveis')}}" title="Imóveis"> <i class="fa fa-home" aria-hidden="true"> </i> <span style="margin-left:10px;"> Imóveis</span> </a>
                             </li>
 
                              <li>
@@ -104,14 +104,10 @@
         <script src="{{url('assets/painel/js/jquery-ui.js')}}"></script>
         <!-- JS Bootstrap -->
         <script src="{{url('assets/all/js/bootstrap.min.js')}}"></script>
-        <script src="{{url('assets/painel/js/jquery.maskedinput.min.js')}}"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
          
 
  </html>    
 
- @yield('post-script-logradouros')
- @yield('uploadLogomarca')
- @yield('uploadImagensProdutos')
- @yield('CalculoPrecoProduto')
- @yield('setar-datas')
+ @yield('post-script')
+ 

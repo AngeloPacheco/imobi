@@ -3,14 +3,14 @@ $("#imagem").on('change', function () {
 
         if (typeof (FileReader) != "undefined") {
 
-            var image_holder = $("#logomarca");
+            var image_holder = $("#foto");
             image_holder.empty();
 
             var reader = new FileReader();
             reader.onload = function (e) {
                 $("<img />", {
                     "src": e.target.result,
-                    "class": "img-thumbnail renderiza-foto-cadastro"
+                    "class": "img-thumbnail renderiza-fotos-cadastro"
                 }).appendTo(image_holder);
 
             }

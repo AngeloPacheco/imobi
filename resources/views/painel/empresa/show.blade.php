@@ -3,14 +3,14 @@
 
 <div class="row painel-row">
     <div class="col-xs-12">
-        <h1>Empresa</h1>
+        <h1>Dadso da imobilária</h1>
         <div class="panel panel-default painel-panel">
             <div class="panel-body">
 
-                <div class="logomarca">
+                <div class="renderiza-foto-show">
                     @foreach($imagens as $imagem)
                          @if ($imagem)
-                           <img class="img-thumbnail renderiza_ logomarca" src="{{url('storage'). '/' . $imagem->nm_imagem}}">
+                           <img class="img-thumbnail" src="{{url('storage'). '/' . $imagem->nm_imagem}}">
                          @endif  
                     @endforeach 
                 </div>           

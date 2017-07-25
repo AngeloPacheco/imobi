@@ -3,7 +3,7 @@
 
     @if ( isset($empresa))
         
-        <h1 class='painel-title'>Editar Empresa</h1>
+        <h1 class='painel-title'>Editar</h1>
         
         <div class="row painel-row">
             <div class="col-xs-12"> 
@@ -12,30 +12,29 @@
                 {!! method_field('PUT') !!}
    @else
         
-        <h1 class='painel-title'>Empresa</h1>
+        <h1 class='painel-title'>Nova imobiliária</h1>
         <div class="row painel-row">
             <div class="col-xs-12"> 
                 <form class="form-inline" method="post" action="{{route('empresa.store')}}" enctype="multipart/form-data">    
     @endif
-    
-        @if (isset($errors) && count($errors) > 0)
-            <div class="alert alert-danger">
-                 <p>Sistema Informa:</p>
-                 @foreach($errors->all() as $error)
-                     <p>{{$error}}</p>
-                 @endforeach
-            </div>
-        @endif
+                    @if (isset($errors) && count($errors) > 0)
+                        <div class="alert alert-danger">
+                             <p>Sistema Informa:</p>
+                             @foreach($errors->all() as $error)
+                                 <p>{{$error}}</p>
+                             @endforeach
+                        </div>
+                    @endif
 
                     {!! csrf_field()!!} 
-                    <div class="panel panel-default panel-logomarca">
+                    <div class="panel panel-default panel-foto">
                         <div class='panel-heading'>Logomarca</div>        
                             <div class='panel-body'>
 
                                 @if ( isset ($nm_imagem))
             
                                     <div  id="logomarca">
-                                       <img class="img-thumbnail" src="{{url('storage/img-empresa') . '/' . $nm_imagem}}">      
+                                       <img class="img-thumbnail renderiza-foto-cadastro" src="{{url('storage/img-empresa') . '/' . $nm_imagem}}">      
                                     </div>
                                     <hr>
                                     <input class='hide' id="imagem" type="file" name="photos[]" multiple />
@@ -67,7 +66,7 @@
                              
                             <div class="form-group form-input">
                                 <label class="form-label">CNPJ</label>
-                                <input size="20" class="form-control" type='text' id='cnpj' name="cnpj" value="{{$empresa->cnpj or old('cnpj')}}">  
+                                <input size="19" class="form-control" type='text' id='cnpj' name="cnpj" value="{{$empresa->cnpj or old('cnpj')}}">  
                             </div>
 
                             <div class="form-group form-input">
@@ -98,7 +97,7 @@
                              
                             <div class="form-group form-input">
                                 <label class="form-label">Número</label>
-                                <input size="10" class="form-control" type='text' name="numero" value="{{$empresa->numero or old('numero')}}">  
+                                <input size="5" class="form-control" type='text' name="numero" value="{{$empresa->numero or old('numero')}}">  
                              </div>
                              
                             <div class="form-group form-input">
@@ -113,7 +112,7 @@
                              
                             <div class="form-group form-input">
                                 <label class="form-label">Cidade</label>
-                                <input size="14" class="form-control" type='text'  id='localidade' name="localidade" value="{{$empresa->localidade or old('localidade')}}">  
+                                <input size="17" class="form-control" type='text'  id='localidade' name="localidade" value="{{$empresa->localidade or old('localidade')}}">  
                             </div>
 
                              <div class="form-group form-input">
@@ -150,7 +149,7 @@
                                 <label class="form-label">Celular</label>
                                 <input size="16" class="form-control" type='text' id='celular' name="celular" value="{{$empresa->celular or old('celular')}}">  
                             </div>
-                        </div>        
+                        </div>
                     </div>
                     
                     <hr>                   
@@ -161,9 +160,8 @@
         </div>    
 @endsection
 
-@section('post-script-logradouros')
-
+@section('post-script')
      <script src="{{url('assets/all/js/buscalogradouro.js')}}"></script>
      <script src="{{url('assets/painel/js/uploadLogomarca.js')}}"></script>
-
+     <script src="{{url('assets/painel/js/jquery.maskedinput.min.js')}}"></script>
 @endsection

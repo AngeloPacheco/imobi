@@ -107,7 +107,7 @@ class EmpresaController extends Controller {
     {
         $empresa = $this->empresa->find($id);
         
-        $title = 'Editar Empresa';
+        $title = 'Editar imobiliária';
         
         $imagens = DB::table('imagens')
                         ->select('nm_imagem')
@@ -145,11 +145,6 @@ class EmpresaController extends Controller {
             
             Imagem::where('conteudo_tipo','=','L')->Update(['nm_imagem' =>  $nm_imagem,]);
         }
-
-
-        
-        
-
 
         if( $update ){
             return redirect('/painel/empresa');

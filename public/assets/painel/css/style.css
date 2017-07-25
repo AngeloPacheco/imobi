@@ -92,7 +92,7 @@ img.logo-painel{
     Listagens
 *****************************/
 
-.painel-tabela-cabecalho{
+.tabela-cabecalho{
     font-size: 1.1em;
 }
 
@@ -144,10 +144,24 @@ img.logo-painel{
    margin: 10px 0 5px 0;
 }
 
-.renderiza_logomarca{
+.renderiza-foto-cadastro{
     max-width: 150px;
+    margin: 0px 30px 0px 0px;
 }
-.panel-logomarca{
+.renderiza-foto-show{
+    max-width: 150px;
+    float: right;
+    margin: 0px 30px 0px 0px;
+}
+.foto-corretor-cadastro{
+    float: right;
+    max-width: 28%;
+    margin: -40px 30px 0 0;
+}
+.btn-foto-corretor{
+    float: right;
+}
+.panel-foto{
     max-width: 40%; 
     text-align: center;
 }
@@ -159,7 +173,14 @@ img.logo-painel{
   padding: 10px 20px;
   border-color: #3d4068;
 }   
+.placeholder-right{
+    text-align: right;
+}
 
+
+.painel-panel{
+    margin-top: 20px;
+}
 
 
 
@@ -247,17 +268,7 @@ input[type="file"] {
     font-weight: bold;
     font-size: 0.8em;
 }
-/**********************************/
-/* 
-    EMPRESA
-*/
-.logomarca{
-    float: right;
-    margin: 0px 30px 0px 0px;
-}
-.painel-panel{
-    margin-top: 20px;
-}
+
 
 
 /*  BUSCA 
@@ -281,9 +292,7 @@ input[type="file"] {
 .painel-checkbox-produtos{
    margin: 30px 10px 0 30px;
 }
-.placeholder-right{
-    text-align: right;
-}
+
 
 .imgs-show-produto{
     max-width: 20%;
