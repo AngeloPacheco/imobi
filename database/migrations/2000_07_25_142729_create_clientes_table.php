@@ -30,8 +30,8 @@ class CreateClientesTable extends Migration
             $table->string('fone_res',20)->nulllable();
             $table->string('fone_com',20)->nulllable();
             $table->string('celular',20)->nulllable();
-            $table->integer('categoria_id')->unsigned();
-            $table->foreign('categoria_id')->references('id')->on('categoria_clientes');
+            $table->string('perfil',45);
+            $table->string('interesses',100);
             $table->timestamps();
         });
     }

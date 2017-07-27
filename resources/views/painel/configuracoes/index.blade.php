@@ -57,11 +57,11 @@
         </div>
 
         <div class="col-md-4 col-sm-4 col-xs-12">
-            <a class="links" href="{{url('painel/categoria-de-clientes')}}" title='Categoria de Clientes'>  
+            <a class="links" href="{{url('painel/perfis')}}" title='Perfil de Clientes'>  
                 <div class="conf-menu">
                     <i class="fa fa-users" aria-hidden="true"></i>
                     <div class="conf-menu-titulo">
-                        <p class="conf-menu-titulo-1">Categoria de</p>
+                        <p class="conf-menu-titulo-1">Perfil de</p>
                         <p class="conf-menu-titulo-2">Clientes</p>
                     </div>
                 </div>   

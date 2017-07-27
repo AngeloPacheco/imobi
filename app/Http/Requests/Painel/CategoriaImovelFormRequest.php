@@ -32,6 +32,6 @@ class CategoriaImovelFormRequest extends FormRequest
     
     public function messages() {
         
-         return ['descricao.required'    => 'Inserir a descrição da categoria'];
+         return ['descricao.required'    => 'Insira a descrição da categoria'];
     }
 }

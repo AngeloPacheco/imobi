@@ -32,9 +32,15 @@ Route::resource('/painel/forma-de-pagamentos', 'Painel\FormaPagtoController');
 Route::get('/painel/forma-de-pagamentos/busca', 'Painel\FormaPagtoController@busca');
 Route::post('/painel/forma-de-pagamentos/busca', 'Painel\FormaPagtoController@busca');
 Route::get('/painel/forma-de-pagamentos/delete/{id}', 'Painel\FormaPagtoController@destroy');
-/*   CATEGORIA CLIENTE */
-Route::resource('/painel/categoria-de-clientes', 'Painel\CategoriaClienteController');
-Route::get('/painel/categoria-de-clientes/delete/{id}', 'Painel\CategoriaClienteController@destroy');
+/*   PERFIL DE CLIENTE */
+Route::resource('/painel/perfis', 'Painel\PerfilController');
+Route::get('/painel/perfis/delete/{id}', 'Painel\PerfilController@destroy');
+/*  CLIENTES */
+Route::resource('/painel/clientes', 'Painel\ClienteController');
+Route::get('/painel/clientes/busca', 'Painel\ClienteController@busca');
+Route::post('/painel/clientes/busca', 'Painel\ClienteController@busca');
+Route::get('/painel/clientes/delete/{id}', 'Painel\ClienteController@destroy');
+
 
 Route::get('/', function () {
     return view('welcome');

@@ -23,13 +23,13 @@
                 </tr>
             @endforeach
         </table>
-         <hr>
-                <a href="{{route('categoria-imoveis.create')}}" class="btn btn-primary form-btns" title="Cadastrar nova categoria ">
-                    <i class="fa fa-plus"></i>
-                </a>
-                <div class="paginacao">
-                    {!! $categorias->links() !!}
-                </div>
+        <hr>
+        <a href="{{route('categoria-imoveis.create')}}" class="btn btn-primary form-btns" title="Cadastrar nova categoria ">
+            <i class="fa fa-plus"></i>
+        </a>
+        <div class="paginacao">
+            {!! $categorias->links() !!}
+        </div>
     </div>
 </div>        
 @endsection

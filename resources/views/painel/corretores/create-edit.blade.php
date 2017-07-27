@@ -36,7 +36,7 @@
                                 <input size="43" class="form-control" type='text' name="nome" value="{{$corretor->nome or old('nome')}}" autofocus="">  
                             </div><br>
 
-                            <div class="foto-corretor-cadastro">
+                            <div class="foto-cadastro">
                                 @if ( isset ($nm_imagem))
                                     <h3>Foto do corretor</h3>
                                     <div  id="foto">
@@ -44,14 +44,14 @@
                                     </div>
                                     <hr>
                                     <input class='hide' id="imagem" type="file" name="photos[]" multiple />
-                                    <label for='imagem' class='btn btn-primary btn-foto-corretor'>Selecionar</label>                        
+                                    <label for='imagem' class='btn btn-primary btn-foto'>Selecionar</label>                        
             
                                 @else              
                                     <h3>Foto do corretor</h3>
                                     <div id="foto"></div>
                                     <hr>
                                     <input class='hide' id="imagem" type="file" name="photos[]" multiple />
-                                    <label for='imagem' class='btn btn-primary btn-foto-corretor'>Selecionar</label>
+                                    <label for='imagem' class='btn btn-primary btn-foto'>Selecionar</label>
 
                                 @endif  
                              </div>       
@@ -106,6 +106,6 @@
 @endsection
 
 @section('post-script')
-     <script src="{{url('assets/painel/js/uploadFotoCorretor.js')}}"></script>
+     <script src="{{url('assets/painel/js/uploadFotoCadastro.js')}}"></script>
      <script src="{{url('assets/painel/js/jquery.maskedinput.min.js')}}"></script>
 @endsection                          

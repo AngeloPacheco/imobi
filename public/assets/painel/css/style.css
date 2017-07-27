@@ -135,13 +135,11 @@ img.logo-painel{
      FORMULARIO DE CADASTROS
 ***********************************/
 .form-input{
-    margin: 10px 0 0 0;
-
+    margin-right: 5px;
 }
-
 .form-label{
    display: block; 
-   margin: 10px 0 5px 0;
+   margin: 15px 0 5px 0;
 }
 
 .renderiza-foto-cadastro{
@@ -153,13 +151,14 @@ img.logo-painel{
     float: right;
     margin: 0px 30px 0px 0px;
 }
-.foto-corretor-cadastro{
+.foto-cadastro{
     float: right;
     max-width: 28%;
-    margin: -40px 30px 0 0;
+    margin: 5px 30px 0 0;
 }
-.btn-foto-corretor{
+.btn-foto{
     float: right;
+    margin-right: 10px;
 }
 .panel-foto{
     max-width: 40%; 
@@ -176,13 +175,25 @@ img.logo-painel{
 .placeholder-right{
     text-align: right;
 }
-
-
 .painel-panel{
     margin-top: 20px;
 }
+.linha-vertical{
+  border-left: 2px solid;
+  box-sizing: border-box;
+  float: right;
+}
+.form-checkbox{
+  border: 1px solid;
+  border-color: #ccc;
+  margin-top: 15px;
+  padding: 20px 20px 20px 20px;
+  border-radius: 5px;
 
-
+}
+.label-checkbox{
+   margin-right: 10px
+}
 
 /* 
   Galeria produtos

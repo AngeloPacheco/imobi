@@ -56,11 +56,29 @@ function existeFormaPagto($descricao){
 }
 
 /* Validar se  categoria de clientes já está cadastrada*/
-function existeCategoriaCliente($descricao){
+function existePerfil($descricao){
   
-  $query = DB::table('categoria_clientes')
-           ->select('categoria_clientes.id')
-           ->where('categoria_clientes.descricao', '=', $descricao)
+  $query = DB::table('perfis')
+           ->select('perfis.id')
+           ->where('perfis.descricao', '=', $descricao)
+           ->get();
+
+  if (count($query) > 0){
+
+    return true;
+  
+  }else{
+
+    return false;
+  }            
+}
+
+/* Validar se cliente já está cadastrada*/
+function existeCliente($cpf_cnpj){
+  
+  $query = DB::table('clientes')
+           ->select('clientes.id')
+           ->where('clientes.cpf_cnpj', '=', $cpf_cnpj)
            ->get();
 
   if (count($query) > 0){
