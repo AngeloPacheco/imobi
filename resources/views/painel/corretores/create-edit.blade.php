@@ -106,6 +106,7 @@
 @endsection
 
 @section('post-script')
+     
      <script src="{{url('assets/painel/js/uploadFotoCadastro.js')}}"></script>
      <script src="{{url('assets/painel/js/jquery.maskedinput.min.js')}}"></script>
 @endsection                          

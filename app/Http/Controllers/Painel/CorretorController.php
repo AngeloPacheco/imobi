@@ -99,8 +99,7 @@ class CorretorController extends Controller
      */
     public function show($id)
     {
-        $title = 'Corretor';
-                
+        $title = 'Dados do Corretor';
         $corretor = $this->corretor->find($id);
 
          //echo '<pre>'; print_r($empresas);  '</pre>';
