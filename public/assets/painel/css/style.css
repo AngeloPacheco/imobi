@@ -104,7 +104,9 @@ img.logo-painel{
 }
 .btn-delete{
     background: #e65a5a;
-
+}
+.btn-download{
+  background: #31708f;
 }
 
 .btn-actions{
@@ -195,6 +197,9 @@ img.logo-painel{
    margin-right: 5px
 }
 
+.decricao{
+    margin-bottom: 20px; 
+}
 /* 
   Galeria produtos
 */
