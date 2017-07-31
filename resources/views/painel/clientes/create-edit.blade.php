@@ -30,88 +30,109 @@
                     {!! csrf_field()!!}     
                     <div class="panel panel-default">
                         <div class='panel-body'>
-                             
-                            <div class="foto-cadastro">
-                                @if ( isset ($nm_imagem))
-                                    <h3>Foto do cliente</h3>
-                                    <div  id="foto">
-                                       <img class="img-thumbnail renderiza-fotos-cadastro" src="{{url('storage/img-clientes') . '/' . $nm_imagem}}">      
-                                    </div>
-                                    <hr>
-                                    <input class='hide' id="imagem" type="file" name="photos[]" multiple />
-                                    <label for='imagem' class='btn btn-primary btn-foto' title="Selecionar em arquivos">Selecionar</label>  
-                                    <!--<label for='imagem' class='btn btn-primary btn-foto' title="Foto Webcam"><span class="fa fa-camera"></span></label>-->                         
-            
-                                @else              
-                                    <h3>Foto do cliente</h3>
-                                    <div id="foto"></div>
-                                    <hr>
-                                    <input class='hide' id="imagem" type="file" name="photos[]" multiple />
-                                    <label for='imagem' class='btn btn-primary btn-foto' title="Selecionar em arquivos">Selecionar</label>
-                                    <!--<label for='imagem' id="webcam" class='btn btn-primary btn-foto' title="Foto Webcam"><span class="fa fa-camera"></span></label>-->
-                                @endif  
-                            </div>      
+                                
+                            <h3>Perfil</h3> 
+                        
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <div class="form-checkbox">  
+                                            @if (!isset($cliente))  
+                                                @foreach ($perfis as $perfil) 
+                                                <label class="label-checkbox"> 
+                                                   <input type='checkbox'  name="perfil[]" value="{{$perfil->descricao}}">{{$perfil->descricao}}   </label>                                  
+                                                @endforeach   
+                                            @else
+                                                 @foreach ($perfis as $perfil)
+                                                 <label class="label-checkbox">
+                                                    <input  type='checkbox'  name="perfil[]" value="{{$perfil->descricao}}"
+                                                        @foreach ($perfilClientes as $perfilcliente)     
+                                                            @if ($perfilcliente == $perfil->descricao)   
+                                                                checked 
+                                                            @endif   
+                                                        @endforeach       
+                                                    >{{$perfil->descricao}}</label> 
+                                                @endforeach       
+                                            @endif
+                                        </div>
+                                    </div><br>
+
+                                    <div class="form-group form-input">
+                                        <label class="form-label">Interesses</label>
+                                        <input size="50" class="form-control" type='text' id="interesses" name="interesses" value="{{$cliente->interesses or old('interesses')}}" placeholder="Aluguéis, salas comerciais, casas ...">  
+                                    </div> 
+
+                                </div>
                             
 
-                            <div class="form-group">
-                                <h3>Perfil</h3> 
-                                <div class="form-checkbox">  
-                                    @if (!isset($cliente))  
-                                        @foreach ($perfis as $perfil) 
-                                        <label class="label-checkbox"> 
-                                           <input type='checkbox'  name="perfil[]" value="{{$perfil->descricao}}">{{$perfil->descricao}}   </label>                                  
-                                        @endforeach   
-                                    @else
-                                         @foreach ($perfis as $perfil)
-                                         <label class="label-checkbox">
-                                            <input  type='checkbox'  name="perfil[]" value="{{$perfil->descricao}}"
-                                                @foreach ($perfilClientes as $perfilcliente)     
-                                                    @if ($perfilcliente == $perfil->descricao)   
-                                                        checked 
-                                                    @endif   
-                                                @endforeach       
-                                            >{{$perfil->descricao}}</label> 
-                                        @endforeach       
-                                    @endif
-                                </div>    
-                            </div><br>
                             
+                          
+                                <div class="col-xs-12 col-md-6">
+                                   <div class="foto-cadastro">
+                                    @if ( isset ($nm_imagem))
+                                        <h5>Foto do cliente</h5>
+                                        <div  id="foto">
+                                           <img class="img-thumbnail renderiza-fotos-cadastro" src="{{url('storage/img-clientes') . '/' . $nm_imagem}}">      
+                                        </div>
+                                        <hr>
+                                        <input class='hide' id="imagem" type="file" name="photos[]" multiple />
+                                        <label for='imagem' class='btn btn-primary btn-foto' title="Selecionar em arquivos">Selecionar</label>  
+                                        <!--<label for='imagem' class='btn btn-primary btn-foto' title="Foto Webcam"><span class="fa fa-camera"></span></label>-->                         
+                    
+                                        @else              
+                                            <h5>Foto do cliente</h5>
+                                            <div id="foto"></div>
+                                            <hr>
+                                            <input class='hide' id="imagem" type="file" name="photos[]" multiple />
+                                            <label for='imagem' class='btn btn-primary btn-foto' title="Selecionar em arquivos">Selecionar</label>
+                                            <!--<label for='imagem' id="webcam" class='btn btn-primary btn-foto' title="Foto Webcam"><span class="fa fa-camera"></span></label>-->
+                                        @endif  
+                                    </div>    
+                                </div>         
+                            </div>
+                        </div>
+                    </div>        
+                         
+                    <div class="panel panel-default">
+                        <div class='panel-body'>
                             <h3>Dados pessoais</h3> 
+                          
                             <div class="form-group form-input">
                                 <label class="form-label">Nome</label>
-                                <input size="50" class="form-control" type='text' name="nome" value="{{$cliente->nome or old('nome')}}" autofocus="">  
+                                <input size="50" class="form-control" type='text' name="nome" value="{{$cliente->nome or old('nome')}}" autofocus="">
                             </div><br>
 
 
-                            <div class="form-group form-input">  
-                                <label class="form-label">Tipo pessoa</label>
-                                <select class="form-control" for='tipo_pessoa' id='tipo_pessoa' name ='tipo_pessoa'>    
-                                    <option></option>
-                                    <option value="F"   
-                                        @if (isset($cliente) && $cliente->tipo_pessoa == "F")
-                                            selected 
-                                        @endif     
-                                    >Física</option>
-                                    
-                                    <option value="J"
-                                        @if (isset($cliente) && $cliente->tipo_pessoa == "J")
-                                            selected 
-                                        @endif    
-                                    >Jurídica</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group form-input">
-                                <label class="form-label">CPF/CNPJ</label>
-                                <input size="15" class="form-control" type='text' id="cpf_cnpj" name="cpf_cnpj" value="{{$cliente->cpf_cnpj or old('cpf_cnpj')}}">  
-                            </div>
-                
-                            <div class="form-group form-input">
-                                <label class="form-label">RG/IE</label>
-                                <input size="11" class="form-control" type='text' id="rg_ie" name="rg_ie" value="{{$cliente->rg_ie or old('rg_ie')}}">  
-                            </div><br>
+                        <div class="form-group form-input">  
+                            <label class="form-label">Tipo pessoa</label>
+                            <select class="form-control" for='tipo_pessoa' id='tipo_pessoa' name ='tipo_pessoa'>    
+                                <option></option>
+                                <option value="F"   
+                                    @if (isset($cliente) && $cliente->tipo_pessoa == "F")
+                                        selected 
+                                    @endif     
+                                >Física</option>
+                                
+                                <option value="J"
+                                    @if (isset($cliente) && $cliente->tipo_pessoa == "J")
+                                        selected 
+                                    @endif    
+                                >Jurídica</option>
+                            </select>
                         </div>
-                    </div>  
+
+                        <div class="form-group form-input">
+                            <label class="form-label">CPF/CNPJ</label>
+                            <input size="15" class="form-control" type='text' id="cpf_cnpj" name="cpf_cnpj" value="{{$cliente->cpf_cnpj or old('cpf_cnpj')}}">  
+                        </div>
+            
+                        <div class="form-group form-input">
+                            <label class="form-label">RG/IE</label>
+                            <input size="11" class="form-control" type='text' id="rg_ie" name="rg_ie" value="{{$cliente->rg_ie or old('rg_ie')}}">  
+                        </div><br>
+
+                    </div>
+                </div>  
 
                     <div class="panel panel-default">
                         <div class='panel-body'> 
@@ -155,7 +176,7 @@
 
                      <div class="panel panel-default">
                         <div class='panel-body'> 
-                            <h3>Contato</h3> 
+                            <h3>Contatos</h3> 
                             <div class="form-group form-input">
                                 <label class="form-label">Telefone Residencial</label>
                                 <input size="15" class="form-control" type='text' id="fone_res" name="fone_res" value="{{$cliente->fone_res or old('fone_res')}}">  
@@ -175,9 +196,21 @@
                                 <label class="form-label">E-mail</label>
                                 <input size="30" class="form-control" type='email' name="email" value="{{$cliente->email or old('email')}}">  
                             </div>
-                         
                         </div>  
                     </div>
+
+                    <div class="panel panel-default">
+                        <div class='panel-body'> 
+                            <div class="form-group form-input">
+                               <h3>Formato de seguro</h3> 
+                                <p>Informações serão inseridas aqui após fechamento do contrato</p>
+                                <p>Caso o cliente seja inquilino</p>
+
+                            </div>
+                        </div>
+                    </div>        
+
+
 
                     <div class="panel panel-default">
                         <div class='panel-body'> 

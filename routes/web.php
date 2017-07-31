@@ -40,6 +40,11 @@ Route::resource('/painel/clientes', 'Painel\ClienteController');
 Route::get('/painel/clientes/busca', 'Painel\ClienteController@busca');
 Route::post('/painel/clientes/busca', 'Painel\ClienteController@busca');
 Route::get('/painel/clientes/delete/{id}', 'Painel\ClienteController@destroy');
+/*  IMÓVEIS */
+Route::resource('/painel/imoveis', 'Painel\ImovelController');
+Route::get('/painel/imoveis/busca', 'Painel\ImovelController@busca');
+Route::post('/painel/imoveis/busca', 'Painel\ImovelController@busca');
+Route::get('/painel/imoveis/delete/{id}', 'Painel\ImovelController@destroy');
 
 
 Route::get('/', function () {

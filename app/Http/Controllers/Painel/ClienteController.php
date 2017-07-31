@@ -71,7 +71,6 @@ class ClienteController extends Controller
                 foreach ($dataForm['perfil'] as $key => $perfil) {
                     $perfis =  $perfis .','. $perfil;
                 }
-            
             }    
             $dataForm['perfil'] =  substr($perfis, 1 ); ;
 
