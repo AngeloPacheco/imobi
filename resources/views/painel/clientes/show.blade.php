@@ -49,6 +49,11 @@
                 @if (isset($cliente->email))
                     <p><b>E-mail :</b> {{$cliente->email}}</p>
                 @endif
+
+                @if (isset($cliente->interesses))
+                    <p><b>Interesses :</b> {{$cliente->interesses}}</p>
+                @endif
+                
                 
                 @if (!empty($docs))  
                     <h4>Documentações</h4>

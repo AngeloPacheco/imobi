@@ -4,9 +4,23 @@ namespace App\Http\Controllers\Painel;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Painel\Imovel;
+use App\Models\Painel\Imagem;
+use App\Models\Painel\Cliente;
+use App\Http\Requests\Painel\ImóvelFormRequest;
+use \Illuminate\Support\Facades\DB;
 
 class ImovelController extends Controller
 {
+    
+    private $imovel;
+    private $totalPage = 10;
+    
+    public function __construct(Imovel $imovel){
+        $this->imovel = $imovel;
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +28,7 @@ class ImovelController extends Controller
      */
     public function index()
     {
-        //
+        return "imovel";
     }
 
     /**

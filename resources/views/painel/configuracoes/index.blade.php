@@ -67,6 +67,17 @@
                 </div>   
             </a> 
         </div>
+
+         <div class="col-md-4 col-sm-4 col-xs-12">
+            <a class="links" href="{{url('painel/infraestruturas')}}" title='Infraestrutura'>  
+                <div class="conf-menu">
+                    <i class="fa fa-tv" aria-hidden="true"></i>
+                    <div class="conf-menu-titulo">
+                        <p class="conf-menu-titulo-1">Infraestrutura</p>
+                    </div>
+                </div>   
+            </a> 
+        </div>
     </div>
     
    

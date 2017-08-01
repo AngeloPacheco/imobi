@@ -32,7 +32,7 @@ class ClienteController extends Controller
         $title    = 'Clientes';
         $clientes =  Cliente::orderBy('nome','asc')->paginate($this->totalPage);
 
-        return view('painel.clientes.index', compact('title', 'clientes','listaPerfil'));
+        return view('painel.clientes.index', compact('title', 'clientes'));
     }
 
     /**
@@ -263,6 +263,7 @@ class ClienteController extends Controller
                      ->orwhere('clientes.perfil','like','%'. $key .'%')
                      ->orwhere('clientes.cpf_cnpj','like','%'. $key .'%')
                      ->orwhere('clientes.localidade','like','%'. $key .'%')
+                     ->orwhere('clientes.interesses','like','%'. $key .'%')
                      ->orderby('clientes.celular','asc')
                      ->Paginate($this->totalPage);
              

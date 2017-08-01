@@ -7,7 +7,7 @@
         <div class="form-search">
              <form class="form-inline" name="formPesquisa" method="post" role="form" action="{{url('painel/clientes/busca')}}">
 
-                 <input class="form-control" type="text" name="descricao" value="" placeholder="Pesquisar"  title='Pesquisa por nome, CPF, CNPJ, cidade ou celular.' autofocus="" size="30">
+                 <input class="form-control" type="text" name="descricao" value="" placeholder="Pesquisar"  title='Pesquisa por nome, CPF, CNPJ, cidade, celular e interesses.' autofocus="" size="30">
                  {!! csrf_field()!!}
                 <button class="btn btn-primary painel-btn-pesquisar" type="submit" title="Pesquisar">
                         <span class="fa fa-search"></span>

@@ -90,3 +90,21 @@ function existeCliente($cpf_cnpj){
     return false;
   }            
 }
+
+/* Validar se infra já está cadastrada*/
+function existeInfra($descricao){
+  
+  $query = DB::table('infras')
+           ->select('infras.id')
+           ->where('infras.descricao', '=', $descricao)
+           ->get();
+
+  if (count($query) > 0){
+
+    return true;
+  
+  }else{
+
+    return false;
+  }            
+}
