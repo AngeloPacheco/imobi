@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInfrasTable extends Migration
+class CreateInfraImoveisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateInfrasTable extends Migration
      */
     public function up()
     {
-        Schema::create('infras', function (Blueprint $table) {
+        Schema::create('infra_imoveis', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('descricao',45);
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ class CreateInfrasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('infras');
+        Schema::dropIfExists('infra_imoveis');
     }
 }
